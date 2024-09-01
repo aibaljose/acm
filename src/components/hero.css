@@ -1,0 +1,32 @@
+.slick-slide > div {
+    margin: 0 10px; /* Adjust the horizontal margin between images */
+  }
+  html{
+    outline: 1px solid red;
+  }
+  
+  .carousel-image {
+    /* background-color: #fff; */
+    width: 400px; /* Adjust the image width */
+    height: 300px; /* Adjust the image height */
+    object-fit: cover; /* Ensures the image fits the defined size without distortion */
+    border-radius: 30px; /* Optional: Adds rounded corners to images */
+  }
+  .textcon{
+    position: relative;
+    height: 60px;
+    width: 320px;
+    background-color: #fff;
+    border-radius: 20px;
+    top: -50px;
+    left: 50px;
+    color: rgb(0, 0, 0);
+    display: flex;justify-content: center;align-items: center;flex-direction: column;
+    
+  }
+  .condd{border: none;
+    display: flex;justify-content: center;align-items: center;
+  }
+  .condd img{
+    object-fit: cover;border: 3px solid rgb(255, 255, 255);
+  }
