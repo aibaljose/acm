@@ -247,7 +247,7 @@ export const benefits = [
     id: "0",
     title: "Tiranga Online quizz",
     text: "Online quizz compettion As we celebrate India's 78th Independence Day, let us not just celebrate our freedom, but also reflect on our responsibilities as citizens.🙌🏻 🪔To inculcate the values of patriotism, democracy and unity among the youth, ACM AJCE presents .",
-    backgroundUrl: "",
+    backgroundUrl: "./src/assets/benefits/card-2.svg",
     iconUrl: benefitIcon1,
     imageUrl: benefitImage2,
   },
