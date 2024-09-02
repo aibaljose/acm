@@ -32,6 +32,12 @@
   }
   .add{
     /* border:2px solid rgb(98, 98, 98); */
-    border-radius: 30px;
-    /* background-image: url('../assets/benefits/card-1.svg'); */
+   
+    background: linear-gradient(to right, rgba(255, 0, 0, 0.425), rgba(0, 0, 255, 0.364)); /* Transparent gradient background */
+    border-radius: 15px; /* Desired rounded corners */
+    background-clip: padding-box; /* Ensures gradient is clipped to the border radius */
+    /* Optionally add a solid background color if needed */
+    background-color: rgba(13, 71, 109, 0.203); 
+  
+  
   }
