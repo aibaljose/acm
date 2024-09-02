@@ -30,3 +30,7 @@
   .condd img{
     object-fit: cover;border: 3px solid rgb(255, 255, 255);
   }
+  .add{
+    border:2px solid rgb(98, 98, 98);
+    border-radius: 30px;
+  }
