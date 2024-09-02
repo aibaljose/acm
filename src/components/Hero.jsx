@@ -6,17 +6,37 @@ import Slider from 'react-slick';
 import { BackgroundCircles, BottomLine, Gradient } from "./design/Hero";
 import { heroIcons } from "../constants";
 import { ScrollParallax } from "react-just-parallax";
-import { useRef, useEffect } from "react";
+import { useRef, useEffect,useState  } from "react";
 import Generating from "./Generating";
 import Notification from "./Notification";
 import CompanyLogos from "./CompanyLogos";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+
+import { isMobile } from 'react-device-detect';
+
 import "./hero.css"
 import img1 from "../assets/exe/vice.jpg"
 import img2 from "../assets/exe/chair.jpg"
 import img3 from "../assets/exe/vicew.jpg"
 import img4 from "../assets/exe/chairw.jpg"
+import img5 from "../assets/exe/mt.jpg"
+import img6 from "../assets/exe/Alfred-P-Benjamin-Treasurer.jpg"
+import img7 from "../assets/exe/Alphonsa-Francis-Marketing-Lead.jpg"
+import img8 from "../assets/exe/Aneetta-Binoy-Secretary_.jpg"
+import img9 from "../assets/exe/Anugrah-Premachandran_ Marketing-Team.jpg"
+import img10 from "../assets/exe/Arjun-Saji-Content-writer.jpg"
+import img11 from "../assets/exe/Ashish-Shabu-Event-Coordinator.jpg"
+import img12 from "../assets/exe/ElsaGeorge-Membership-developer_.jpg"
+import img13 from "../assets/exe/Evana-Ann-Benny-Chair-ACMW.jpeg"
+import img14 from "../assets/exe/Hridya-Catherene-Yesudas-Event-Coordinator-ACM-W_.jpg"
+import img15 from "../assets/exe/Kripa-Maria-Sibi-Content-Writer-ACM-W.jpg"
+import img16 from "../assets/exe/Leo-Siby-Social-Media-Manger.jpg"
+import img17 from "../assets/exe/Nirmal-Lal-Mathew -Design-Lead.jpg"
+
+import aibal from "../assets/exe/aibaljose.png"
+
+
 // import img2 from "../assets/chair.png"
 // import img2 from "../assets/chair.png"
 // import img2 from "../assets/chair.png"
@@ -35,25 +55,81 @@ const Hero = () => {
     'https://acmajce.vercel.app/assets/aibal-DDtIRdZu.png',
 
   ];
-  const slides = [
-    { src: img1, text: "Aibal Jose(CHAIR)" },
-    { src: img2, text: "This is the second slide" },
-    { src: img3, text: "This is the second slide" },
-    { src: img4, text: "This is the second slide" },
-  ];
-
-
-  const scrollContainerRef = useRef(null);
-  const settings = {
+  const [settings, setSettings] = useState({
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
     pauseOnHover: true,
-  };
+  });
+  const slides = [
+    { src: img2, text: "Joel John",text2: "(Chair)" },
+    { src: img1, text: "Aadhi Lakshmi M R ",text2: "(Vice Chair)" },
+    { src: img13, text: "Evana Ann Benny ",text2: "(Chair ACM-W)" },
+    { src: img3, text: "Ashly Ros Siju ",text2: "(Vice Chair ACM-W)" },
+    { src: img8, text: "Aneetta Binoy ",text2: "(Secretary)" },
+    { src: img6, text: "Alfred P Benjamin ",text2: "(Treasurer)" },
+    { src:aibal, text: "Aibal Jose",text2: " (Web Master)" },
+    { src: img4, text: "Aevlin Prince",text2: "(Design Lead ACM-W)" },
+    { src: img17, text: "Nirmal Lal Mathew",text2: "(Design Lead)" },
+    { src: img11, text: "Ashish Shabu",text2: "(Event Coordinator)" },
+    { src: img14, text: "Hridya Catherene Yesudas",text2: "(Event Coordinator ACM-W)" },
+    { src: img12, text: "Elsa George",text2: "(Membership Developer)" },
+    { src: img16, text: "Leo Siby",text2: "(Social Media Lead)" },
+    { src: img7, text: "Alphonsa Francis",text2: "(Marketing Lead)" },
+    { src: img5, text: "Alana mary Pramod",text2: "(Marketing Team)" },
+    { src: img9, text: "Anugrah Premachandran",text2: "(Marketing Team)" },
+    { src: img10, text: "Arjun Saji",text2: "(Content Writer)" },
+    { src: img15, text: "Kripa Maria Sibi",text2: "(Content Writer ACM-W)" },
+ 
+
+
+
+   
+  ];
+  const scrollContainerRef = useRef(null);
+  useEffect(() => {
+    // Function to update settings based on screen size
+    const updateSettings = () => {
+      if (isMobile) {
+        setSettings({
+          dots: true,
+          infinite: true,
+          speed: 500,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          autoplay: true,
+          autoplaySpeed: 2000,
+          pauseOnHover: true,
+        });
+      } else {
+        setSettings({
+          dots: true,
+          infinite: true,
+          speed: 500,
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          autoplay: true,
+          autoplaySpeed: 2000,
+          pauseOnHover: true,
+        });
+      }
+    };
+ 
+
+    // Update settings initially
+    updateSettings();
+
+    // Add window resize event listener
+    window.addEventListener('resize', updateSettings);
+
+   // Clean up event listener on component unmount
+ 
+}, []);
+  
   const parallaxRef = useRef(null);
 
   return (
@@ -93,7 +169,7 @@ const Hero = () => {
             Join our community of passionate students and professionals dedicated to advancing computing and technology.
           </p>
           <Button href="/pricing" white>
-            Get started
+           See Events
           </Button>
         </div>
         <div className="relative max-w-[23rem] mx-auto md:max-w-5xl xl:mb-24">
@@ -150,21 +226,22 @@ const Hero = () => {
 
 
 
-        <Heading
+        <Heading 
           className="md:max-w-md lg:max-w-2xl"
           title="Our Execom"
         />
         <Slider {...settings} className="mt-20">
 
           {slides.map((slide, index) => (
-            <div key={index} className="condd">
+            <div id="execom" key={index} className="condd">
               <img
                 src={slide.src}
                 alt={`Slide ${index}`}
                 className="shadow-lg carousel-image"
               />
-              <div className="textcon">
-                {slide.text}
+              <div className="textcon" style={{textAlign:"center"}}>
+                {slide.text}<br></br>
+                {slide.text2}
               </div>
             </div>
           ))}

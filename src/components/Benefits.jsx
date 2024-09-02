@@ -7,7 +7,7 @@ import ClipPath from "../assets/svg/ClipPath";
 
 const Benefits = () => {
   return (
-    <Section id="features">
+    <Section id="events">
       <div className="container relative z-2">
         <Heading
           className="md:max-w-md lg:max-w-2xl"
@@ -18,12 +18,14 @@ const Benefits = () => {
           {benefits.map((item) => (
             <div
               className=" add block relative p-0.5 bg-no-repeat bg-[length:100%_100%] md:max-w-[24rem]"
-              style={{
-                backgroundImage: `url(${item.backgroundUrl})`,
-              }}
+              // style={{
+              //   background: `linear-gradient(to right, red, blue);`,
+              // }}
               key={item.id}
             >
-              <div className="  relative z-2 flex flex-col min-h-[22rem] p-[2.4rem] pointer-events-none">
+              <div style={{
+                background: `linear-gradient(90deg, rgba(9,9,121,1) 4%, rgba(0,212,255,1) 100%);`,
+              }} className="  relative z-2 flex flex-col min-h-[22rem] p-[2.4rem] pointer-events-none">
                 <h5 className="h5 mb-5">{item.title}</h5>
                 <p className="body-2 mb-6 text-n-3">{item.text}</p>
                 <div className=" flex items-center mt-auto">
@@ -34,7 +36,7 @@ const Benefits = () => {
                     alt={item.title}
                   />
                   <p className="ml-auto font-code text-xs font-bold text-n-1 uppercase tracking-wider">
-                    Explore more
+                    Register Now
                   </p>
                   <Arrow />
                 </div>

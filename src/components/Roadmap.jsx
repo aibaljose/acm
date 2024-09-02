@@ -48,12 +48,12 @@ const Roadmap = () => (
                     </div>
                   </div>
 
-                  <div className="mb-10 -my-10 -mx-15">
+                  <div id="about" className="dda mb-10 -my-10 -mx-15" >
                     <img
-                      className="w-full"
+                      className=""
                       src={item.imageUrl}
-                      width={628}
-                      height={426}
+                      width={400}
+                      height={200}
                       alt={item.title}
                     />
                   </div>

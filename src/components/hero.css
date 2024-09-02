@@ -1,43 +1,67 @@
 .slick-slide > div {
-    margin: 0 10px; /* Adjust the horizontal margin between images */
-  }
-  html{
-    outline: 1px solid red;
-  }
-  
-  .carousel-image {
-    /* background-color: #fff; */
-    width: 400px; /* Adjust the image width */
-    height: 300px; /* Adjust the image height */
-    object-fit: cover; /* Ensures the image fits the defined size without distortion */
-    border-radius: 30px; /* Optional: Adds rounded corners to images */
-  }
-  .textcon{
-    position: relative;
-    height: 60px;
-    width: 320px;
-    background-color: #fff;
-    border-radius: 20px;
-    top: -50px;
-    left: 50px;
-    color: rgb(0, 0, 0);
-    display: flex;justify-content: center;align-items: center;flex-direction: column;
-    
-  }
-  .condd{border: none;
-    display: flex;justify-content: center;align-items: center;
-  }
-  .condd img{
-    object-fit: cover;border: 3px solid rgb(255, 255, 255);
-  }
-  .add{
-    /* border:2px solid rgb(98, 98, 98); */
-   
-    background: linear-gradient(to right, rgba(255, 0, 0, 0.425), rgba(0, 0, 255, 0.364)); /* Transparent gradient background */
-    border-radius: 15px; /* Desired rounded corners */
-    background-clip: padding-box; /* Ensures gradient is clipped to the border radius */
-    /* Optionally add a solid background color if needed */
-    background-color: rgba(13, 71, 109, 0.203); 
-  
-  
-  }
+  margin: 0 10px; /* Adjust the horizontal margin between images */
+}
+html {
+  outline: 1px solid red;
+}
+
+.carousel-image {
+  /* background-color: #fff; */
+  width: 400px; /* Adjust the image width */
+  height: 300px; /* Adjust the image height */
+  object-fit: cover; /* Ensures the image fits the defined size without distortion */
+  border-radius: 30px; /* Optional: Adds rounded corners to images */
+}
+.textcon {
+  position: absolute;
+  height: 60px;
+  width: 320px;
+  min-width: 100px;
+  background-color: #fff;
+  border-radius: 20px;
+  top: 240px;
+  left: 40px;
+  color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+@media screen and (max-device-width: 480px) 
+    and (orientation: portrait) {
+      .textcon{
+        display: none;
+        left: 40px;
+        height: 60px;
+        width: 200px;
+      }
+}
+
+.condd {
+  border: none;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.condd img {
+  object-fit: cover;
+  border: 3px solid rgb(255, 255, 255);
+}
+.add {
+  /* border:2px solid rgb(98, 98, 98); */
+
+  background: linear-gradient(
+    90deg,
+    rgba(9, 121, 61, 0.351) 4%,
+    rgba(0, 0, 0, 0) 100%
+  ); /* Transparent gradient background */
+  border-radius: 15px; /* Desired rounded corners */
+  background-clip: padding-box; /* Ensures gradient is clipped to the border radius */
+  /* Optionally add a solid background color if needed */
+  /* background:linear-gradient(to right, rgba(0, 255, 153, 0.203), rgba(0, 0, 255, 0.252)); */
+}
+.dda{
+  display: flex;justify-content: center;align-items: center;
+}
