@@ -1,4 +1,5 @@
 import {
+  benefitCard1,
   benefitIcon1,
   benefitIcon2,
   benefitIcon3,
@@ -245,17 +246,17 @@ export const benefits = [
   {
     id: "0",
     title: "Tiranga Online quizz",
-    text: "Online quizz compettion .",
-    backgroundUrl: "./src/assets/benefits/card-1.svg",
+    text: "Online quizz compettion As we celebrate India's 78th Independence Day, let us not just celebrate our freedom, but also reflect on our responsibilities as citizens.🙌🏻 🪔To inculcate the values of patriotism, democracy and unity among the youth, ACM AJCE presents .",
+    backgroundUrl: benefitCard1,
     iconUrl: benefitIcon1,
     imageUrl: benefitImage2,
   },
   {
     id: "1",
-    title: "Improve everyday",
-    text: "The app uses natural language processing to understand user queries and provide accurate and relevant responses.",
+    title: "RoadMap to Cyber Security",
+    text: "To explore a new world of cyber security and dive into its important aspects, ACM AJCE presents you a webinar on the topic: 'Roadmap to Cyber-Security' 🛡️ 💫<br> Speaker: Angel Rose Cyber Security Expert, (AJCE 2018 pass out).",
     backgroundUrl: "./src/assets/benefits/card-2.svg",
-    iconUrl: benefitIcon2,
+    iconUrl: benefitIcon1,
     imageUrl: benefitImage2,
     light: true,
   },
